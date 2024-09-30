@@ -1,4 +1,4 @@
-package leetcode_practise
+package leetcode
 
 import "fmt"
 
@@ -24,19 +24,19 @@ func romanToInt(s string) int {
 		var w = string(sArray[i])
 		fmt.Println(w, "====>", w)
 		if w == "I" {
-			if (i + 1) < length && (string(sArray[i+1]) == "V" || string(sArray[i+1]) == "X") {
+			if (i+1) < length && (string(sArray[i+1]) == "V" || string(sArray[i+1]) == "X") {
 				result -= 1
 			} else {
 				result += 1
 			}
 		} else if w == "X" {
-			if (i + 1) < length && (string(sArray[i+1]) == "L" || string(sArray[i+1]) == "C") {
+			if (i+1) < length && (string(sArray[i+1]) == "L" || string(sArray[i+1]) == "C") {
 				result -= 10
 			} else {
 				result += 10
 			}
 		} else if w == "C" {
-			if (i + 1) < length && (string(sArray[i+1]) == "D" || string(sArray[i+1]) == "M") {
+			if (i+1) < length && (string(sArray[i+1]) == "D" || string(sArray[i+1]) == "M") {
 				result -= 100
 			} else {
 				result += 100

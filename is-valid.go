@@ -1,7 +1,6 @@
-package leetcode_practise
+package leetcode
 
 func isValid(s string) bool {
-
 
 	type Stack struct {
 		items []string
@@ -25,12 +24,12 @@ func isValid(s string) bool {
 	sort[")"] = "right"
 
 	for i := 0; i < len(s); i++ {
-		sub := s[i:i+1]
+		sub := s[i : i+1]
 		if len(stack.items) > 0 {
 			item := stack.items[len(stack.items)-1]
 			if m[item] == m[sub] && sort[item] == "left" && sort[sub] == "right" {
 				//pop the top of the stack
-				stack.items = stack.items[0:len(stack.items)-1]
+				stack.items = stack.items[0 : len(stack.items)-1]
 			} else {
 				//push sub string to stack
 				stack.items = append(stack.items, sub)

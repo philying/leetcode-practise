@@ -1,4 +1,4 @@
-package leetcode_practise
+package leetcode
 
 func reverse(x int) int {
 	count := 0
@@ -10,11 +10,11 @@ func reverse(x int) int {
 	i := 0
 	value := 0
 	for i < count {
-		num := x/pow(10,i)%10
+		num := x / pow(10, i) % 10
 		value += num * pow(10, count-i-1)
 		i += 1
 	}
-	max := pow(2,31)
+	max := pow(2, 31)
 	min := max * -1
 	if value > max || value < min {
 		value = 0

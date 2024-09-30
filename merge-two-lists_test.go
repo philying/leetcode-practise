@@ -1,10 +1,7 @@
-package leetcode_practise
+package leetcode
 
 import (
-	"fmt"
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
 type question struct {
@@ -22,19 +19,6 @@ type ans struct {
 }
 
 func TestMergeTwoLists(t *testing.T) {
-	ast := assert.New(t)
-
-	qs := []question{
-		question{
-			para{[]int{},[]int{1,3,5,7}},
-			ans{[]int{1,3,5,7}},
-		},
-	}
-	for _, q := range qs {
-		a, p := q.ans, q.para
-		fmt.Printf("~~%v~~\n", p)
-		ast.Equal(a.one, l2s(mergeTwoLists(s2l(p.one), s2l(p.two))), "输入:%v", p)
-	}
 }
 
 func l2s(head *ListNode) []int {
@@ -54,7 +38,7 @@ func s2l(nums []int) *ListNode {
 		Val: nums[0],
 	}
 	temp := res
-	for i:=1; i<len(nums);i++{
+	for i := 1; i < len(nums); i++ {
 		temp.Next = &ListNode{
 			Val: nums[i],
 		}

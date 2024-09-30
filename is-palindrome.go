@@ -1,4 +1,4 @@
-package leetcode_practise
+package leetcode
 
 func isPalindrome(x int) bool {
 	num := 0
@@ -7,8 +7,8 @@ func isPalindrome(x int) bool {
 		return false
 	}
 	for {
-		num = num * 10 + reverse%10
-		reverse/=10
+		num = num*10 + reverse%10
+		reverse /= 10
 		if reverse == 0 {
 			break
 		}

@@ -1,9 +1,9 @@
-package leetcode_practise
+package leetcode
 
 func twoSum(nums []int, target int) []int {
 	sm := map[int]int{}
 	for i, x := range nums {
-		value, isExist := sm[target - x]
+		value, isExist := sm[target-x]
 		if isExist {
 			return []int{value, i}
 		}
@@ -11,4 +11,3 @@ func twoSum(nums []int, target int) []int {
 	}
 	return nil
 }
-

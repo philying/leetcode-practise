@@ -1,4 +1,4 @@
-package leetcode_practise
+package leetcode
 
 import "fmt"
 
@@ -13,7 +13,7 @@ func longestCommonPrefix(strs []string) string {
 		}
 		s0 := strs[0]
 		s1 := strs[1]
-		for i:=0; i<minS; i++{
+		for i := 0; i < minS; i++ {
 			if s0[i:i+1] == s1[i:i+1] {
 				newStr = newStr + s0[i:i+1]
 			} else {
@@ -29,7 +29,7 @@ func longestCommonPrefix(strs []string) string {
 		}
 		// compare big or small
 		strLen := len(newStr)
-		for m:=2; m<len(strs); m++{
+		for m := 2; m < len(strs); m++ {
 			s := strs[m]
 			if s == "" {
 				return ""
@@ -38,7 +38,7 @@ func longestCommonPrefix(strs []string) string {
 				strLen = len(s)
 			}
 			result = ""
-			for j:=0; j<strLen; j++ {
+			for j := 0; j < strLen; j++ {
 				if s[j:j+1] == newStr[j:j+1] {
 					result = result + s[j:j+1]
 				} else {

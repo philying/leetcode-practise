@@ -1,4 +1,4 @@
-package leetcode_practise
+package leetcode
 
 import (
 	"fmt"
